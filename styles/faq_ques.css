@@ -1,0 +1,117 @@
+.faq {
+  margin: 15px 0px;
+  max-width: 600px;
+
+  padding: 19px 0px;
+
+  border-bottom: 1px solid rgb(138, 132, 131);
+  cursor: pointer;
+}
+
+.side__with_faq {
+}
+.about__us_main_text {
+  font-weight: 600;
+  font-size: 34px;
+  padding: 10px 15px;
+}
+
+.icons_section {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 113, 91, 1);
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons_section.second {
+  background-color: rgba(237, 250, 227, 1);
+}
+
+.icons_section.third {
+  background-color: rgba(255, 248, 227, 1);
+}
+
+.person_img_1 {
+}
+
+.person_img_2 {
+  margin-top: 1px;
+}
+
+.question {
+  display: flex;
+  /* justify-content: flex-start; */
+  justify-content: space-between;
+  align-items: center;
+
+  column-gap: 35px;
+}
+
+.question h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.4s ease;
+  color: #767170;
+}
+
+.answer p {
+  padding-top: 1rem;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.faq.active .answer {
+  max-height: 300px;
+  animation: fade 1s ease-in-out;
+}
+
+.faq.active svg {
+  transform: rotate(180deg);
+}
+
+svg {
+  transition: transform 0.5s ease-in;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY((0px));
+  }
+}
+
+@media (max-width: 620px) {
+  .about__us_main_text {
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 390px) {
+  .question h3 {
+    font-size: 15px;
+  }
+
+  .answer p {
+    font-size: 13px;
+  }
+}
+
+/* СДЕЛАТЬ АДАПТИВ */

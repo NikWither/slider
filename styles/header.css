@@ -1,0 +1,243 @@
+.open {
+  display: flex !important;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.logo {
+  display: flex;
+}
+
+/* НАВИГАЦИЯ ПО СЕРЕДИНЕ КОТОРАЯ */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 55px;
+}
+
+/* Классные линии при наведении */
+
+.nav__link {
+  color: black;
+  font-weight: 500;
+  font-size: 22px;
+  position: relative;
+}
+
+.nav__link::after {
+  display: block;
+  height: 2px;
+  background-color: #d24706;
+  content: "";
+
+  position: absolute;
+  left: 0;
+  width: 0%;
+  bottom: -6px;
+
+  transition: width 0.3s ease-in;
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+/* КОНЕЦ*/
+
+.settings {
+  display: flex;
+  align-items: center;
+}
+
+.account {
+  font-size: 28px;
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* THEAM BTN */
+
+.toggle-button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  display: block;
+  width: 60px;
+  height: 30px;
+  background-color: #55C9A6;
+  border-radius: 15px;
+  position: relative;
+  transition: background-color 0.3s ease;
+  border: 1px solid black;
+}
+/* блядский шар */
+.toggle-handle {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 0.5px solid black;
+  position: absolute;
+  left: 0;
+  top: -1.09px;
+  transition: left 0.3s ease;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #AA3659;
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-handle {
+  left: 30px;
+}
+
+/* END THEAM */
+
+.burger {
+  display: none;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30px;
+  height: 18px;
+}
+
+.burger span {
+  height: 2px;
+  width: 80%;
+  transform: scale(1);
+  background-color: #464646;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #464646;
+  transition: all 0.3s ease 0s;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  bottom: 0;
+}
+
+/* Добавляем класс active для анимации иконки бургера */
+.burger.active span {
+  transform: scale(0);
+}
+
+.burger.active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+
+@media (max-width: 950px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    overflow-y: auto;
+    padding: 50px 40px;
+    background-color: #c5c5c5;
+    animation: burgerAnimation 0.4s;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    vertical-align: middle;
+    align-items: center;
+    row-gap: 30px;
+  }
+
+  .nav__link {
+    color: black;
+    font-weight: 500;
+    font-size: 32px;
+  }
+
+  .settings {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 340px;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    animation: burgerAnimation 0.4s;
+  }
+
+  .account {
+    font-size: 38px;
+    color: black;
+    font-weight: 500;
+  }
+
+  .toggle-button {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 650px) {
+  .logo img {
+    width: 100px;
+    height: 26px;
+  }
+}
+
+/* Анимация переключения бургера */
+
+@keyframes burgerAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

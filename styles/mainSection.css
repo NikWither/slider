@@ -1,0 +1,156 @@
+.bilboard__section {
+  margin-top: 31px;
+  position: relative;
+}
+
+.bilboard__img {
+}
+
+.banner__message {
+  position: absolute;
+  top: 160px;
+  left: 70px;
+}
+.message__first {
+  font-size: 55px;
+  font-weight: 630;
+  animation: text 3s 1;
+}
+
+.message__second {
+  font-size: 55px;
+  font-weight: 630;
+  animation: text 3s 1;
+}
+
+.message + .message {
+  margin-top: 10px;
+}
+
+.planYourTripBtn {
+  margin-top: 36px;
+  font-size: 25px;
+
+  background-color: #ff715b;
+  color: white;
+  padding: 20px 35px;
+  cursor: pointer;
+}
+
+/* MODULE WINDOW */
+
+.modal__window {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99998;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto; /* ЕСЛИ КОНТЕНТ ВНУТРИ ОКНА НЕ БУДЕТ УМЕЩАТЬСЯ, ТО ПОЯВИТЬСЯ ВОЗМОЖНОСТЬ СКРОЛИТЬ ЕГО */
+  visibility: hidden;
+  opacity: 0;
+  /* ДОБАВЛЕНИЕ АНИМАЦИИ */
+  transition: opacity 0.4s, visibility 0.4s;
+}
+
+.modal__box button {
+  position: absolute;
+  padding: 5px;
+  top: 8px;
+  right: 8px;
+}
+
+.modal__box h2 {
+  padding-top: 10px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.modal__box p {
+  padding-top: 15px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.modal__window.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__box {
+  max-width: 750px;
+
+  margin: 30px 15px;
+  padding: 45px;
+
+  z-index: 1;
+  background-color: white;
+  box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+  color: #121212;
+  /* АНИМАЦИЯ */
+  transform: scale(0);
+  transition: transform 0.8s;
+}
+
+.modal__window.open .modal__box {
+  transform: scale(1);
+}
+
+@media (max-width: 850px) {
+  .banner__message {
+    top: 38px;
+    left: 35px;
+  }
+  .message__first {
+    font-size: 40px;
+    font-weight: 630;
+  }
+  .message__second {
+    font-size: 40px;
+    font-weight: 630;
+  }
+
+  .message + .message {
+    margin-top: 20px;
+  }
+
+  .planYourTripBtn {
+    margin-top: 25px;
+    padding: 15px 25px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .message__first {
+    font-size: 25px;
+    font-weight: 630;
+  }
+  .message__second {
+    font-size: 25px;
+    font-weight: 630;
+  }
+
+  .banner__message {
+    top: 14px;
+    left: 14px;
+  }
+  .message {
+    font-size: 20px;
+    font-weight: 630;
+  }
+
+  .message + .message {
+    margin-top: 16px;
+  }
+
+  .planYourTripBtn {
+    margin-top: 16px;
+    padding: 10px 14px;
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS STYLES -->
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <!-- <link rel="stylesheet" href="styles/header_new.css"> -->
+    <link rel="stylesheet" href="styles/mainSection.css" />
+    <link rel="stylesheet" href="styles/stepsSection.css" />
+    <link rel="stylesheet" href="styles/destinations.css" />
+    <link rel="stylesheet" href="styles/about_us.css" />
+    <link rel="stylesheet" href="styles/faq_ques.css" />
+    <link rel="stylesheet" href="styles/otherdest.css" />
+    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/practice.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- подключение GSAP анимации -->
+    <script src="https://unpkg.com/gsap@3.9.1/dist/gsap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      
+<!-- ================  H E A D E R ===================================-->
+        
+    <header class="header">
+
+      <div class="logo">
+        <img src="img/logo.png" alt="logo" id="logo_img"/>
+      </div>
+        
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#!" class="nav__link">Destination</a>
+          </li>
+          <li class="nav__item">
+            <a href="#!" class="nav__link">Offer</a>
+            </li>
+          <li class="nav__item">
+            <a href="#!" class="nav__link">Tour</a>
+          </li>
+          <li class="nav__item">
+            <a href="#!" class="nav__link">Blog</a>
+          </li>
+        </ul>
+      </nav>
+        
+      <div class="settings">
+        <a href="#!" class="account">My account</a>
+        <!-- btn theam -->
+        <div class="toggle-button">
+            <input type="checkbox" class="toggle-checkbox" id="toggle">
+            <label class="toggle-label" for="toggle">
+              <div class="toggle-handle"></div>
+            </label>
+        </div>
+      </div>
+      <!-- Иконка бургерменю -->
+      <div class="burger">
+        <span></span>
+      </div>
+    </header>
+     
+<!-- ================  M A I N ===================================-->
+
+      <main>
+
+<!-- ================  D E S T I N A T I O N S ===================================-->
+
+        <!-- <div class="bilboard__section">
+          <img class="bilboard__img" src="img/hero-banner.png" alt="banner" id="bilboard_img"/>
+          <div class="banner__message">
+            <h2 class="message__first">It's Time To</h2>
+            <h2 class="message__second">Explore The World</h2>
+            <button class="planYourTripBtn" id="planYourTripBtn">
+              Plan Your Trip
+            </button>
+          </div>
+        </div> -->
+
+<!-- ================  M O D A L W I N D O W ===================================-->
+        
+        <div class="modal__window">
+          <div class="modal__box">
+            <button id="close__btn">Закрыть</button>
+            <h2>This is my module window!</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+              inventore veniam doloribus sapiente odio praesentium! Animi
+              aspernatur voluptas explicabo dolores, hic repellendus! Magni?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+              inventore veniam doloribus sapiente odio praesentium! Animi
+              aspernatur voluptas explicabo dolores, hic repellendus! Magni?
+            </p>
+          </div>
+        </div>
+        
+<!-- ================  S T E P S ===================================-->
+        
+        <!-- <div class="steps">
+          <div class="step">
+            <img src="./img/step1.png" alt="step 1" class="step__img" />
+            <div class="main__text">Cheese Destination</div>
+            <div class="sup__text">
+              Just open your map and put your finger on random place
+            </div>
+          </div>
+          <div class="step">
+            <img src="./img/step2.png" alt="step 1" class="step__img" />
+            <div class="main__text">Explore The Place</div>
+            <div class="sup__text">
+              Just open your map and put your finger on random place
+            </div>
+          </div>
+          <div class="step">
+            <img src="./img/step3.png" alt="step 1" class="step__img" />
+            <div class="main__text">Start Your Journey</div>
+            <div class="sup__text">
+              Just open your map and put your finger on random place
+            </div>
+          </div>
+          <div class="step">
+            <img src="./img/step4.png" alt="step 1" class="step__img" />
+            <div class="main__text">Let's Enjoy</div>
+            <div class="sup__text">
+              Just open your map and put your finger on random place
+            </div>
+          </div>
+        </div> -->
+
+<!-- ================  D E S T I N A T I O N S ===================================-->
+<!-- 
+        <div class="destinations">
+          <div class="item">
+            <div class="destinations__main_text">Top <span>Destinations</span></br>In The World</div>
+            <div class="destinations__sup_text">
+              It is a long established fact that a reader will be the distracted
+              by the readable content of a page when looking at its layout from
+              it.
+            </div>
+            <button class="destinationsBtn" id="">
+              Discover More
+            </button>
+          </div>
+          <div class="item city_images">
+            <img
+              src="./img/Cuba-city 1.png"
+              alt="Cuba Photo"
+              class="destinations__img"
+            />
+            <div class="city__sup_text">Cuba</div>
+          </div>
+          <div class="item city_images">
+            <img
+              src="./img/Paris-City.png"
+              alt="Paris Photo"
+              class="destinations__img"
+            />
+            <div class="city__sup_text paris">Paris</div>
+          </div>
+          <div class="item city_images">
+            <img
+              src="./img/japan.png"
+              alt="Japan Photo"
+              class="destinations__img"
+            />
+            <div class="city__sup_text">Japan</div>
+          </div>
+        </div> -->
+
+<!-- ================  A B O U T  U S ===================================-->
+
+        <!-- <div class="about__us">
+          <div class="section__with_img">
+            <div class="red_circle"></div>
+            <img src="img/lighthouse 1.png" alt="" class="lighthouse">
+            <div class="yellow_square"></div>
+          </div>
+          <div class="side__with_faq">
+            <div class="about__us_main_text">
+              We Offering In Total <br> Tours Out The World
+            </div>
+              <div class="faq">
+                <div class="question">
+                  <div class="icons_section">
+                    <img class="person_img_1" src="img/Vector (2).png" alt="">
+                    <img class="person_img_2" src="img/Vector (3).png" alt="">
+                  </div>
+
+                  <h3>Best Travel Guide For You</h3>
+                  <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path
+                      d="M3 3L21 21L39 3"
+                      stroke="white"
+                      stroke-width="7"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="answer">
+                  <p>
+                    Travel has helped us to understandsa the meaning of life and it has helped us become better people. Each time we travel, we see the world with new eyes. Travel has helped us to understand the meaning of life
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq">
+                <div class="question">
+                  <div class="icons_section second">
+                    <img class="person_img_1" src="img/Vector (1).png" alt="">
+                  </div>
+
+                  <h3>World Class Services Provide For You</h3>
+                  <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path
+                      d="M3 3L21 21L39 3"
+                      stroke="white"
+                      stroke-width="7"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="answer">
+                  <p>
+                    Travel has helped us to understandsa the meaning of life and it has helped us become better people. Each time we travel, we see the world with new eyes. Travel has helped us to understand the meaning of life
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq">
+                <div class="question">
+                  <div class="icons_section third">
+                    <img class="person_img_1" src="img/Vector.png" alt="">
+
+                  </div>
+
+                  <h3>24/7 Strong Customer Support</h3>
+                  <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path
+                      d="M3 3L21 21L39 3"
+                      stroke="white"
+                      stroke-width="7"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="answer">
+                  <p>
+                    Travel has helped us to understandsa the meaning of life and it has helped us become better people. Each time we travel, we see the world with new eyes. Travel has helped us to understand the meaning of life
+                  </p>
+                </div>
+              </div>
+          </div> 
+        </div>
+         -->
+<!-- ================  O T H E R D E S T I N A T I O N S ===================================-->
+
+
+<!-- ================  S L I D E R  ===================================-->
+
+          <div class="slider__title">
+            What Our Happy Customers <br >Say About Us
+          </div>
+
+        <div class="slider__section">
+
+          <div class="slider">
+
+            <div class="slider__liner_first">
+            
+               
+              <div class="card_item">
+                <div class="card_line"></div>
+                <div class="info">
+                  <img src="img/my_photo.jpg" alt="" class="slider_image-card"/>
+                  <div class="main_info">
+                    <p class="main_info_text-first">Tsaplin Vsevolod</p>
+                    <p class="main_info_text-second">Beginner frontend developer</p>
+                  </div>
+                </div>
+
+                <div class="main_text_slider">
+                  Jetrips Hotel is an excellent choice for anybody for considering hosting their events there. Top levela facilities and excellent staff make for a brilliantad environment within which to operate. The hotel is meticulous in its planning.
+                </div>
+              </div>
+      
+              <div class="card_item">
+                <div class="info">
+                  <img src="img/eric2.jpg" alt="" class="slider_image-card"/>
+                  <div class="main_info">
+                    <p class="main_info_text-first">Surname Name</p>
+                    <p class="main_info_text-second">Info about another person</p>
+                  </div>
+                </div>
+
+                <div class="main_text_slider">
+                  Jetrips Hotel is an excellent choice for anybody for considering hosting their events there. Top levela facilities and excellent staff make for a brilliantad environment within which to operate. The hotel is meticulous in its planning.
+                </div>
+
+              </div>
+
+              <div class="card_item">
+                <div class="info">
+                  <img src="img/eric3.jpg" alt="" class="slider_image-card"/>
+                  <div class="main_info">
+                    <p class="main_info_text-first">Surname Name</p>
+                    <p class="main_info_text-second">Info about another person</p>
+                  </div>
+                </div>
+                <div class="main_text_slider">
+                  Jetrips Hotel is an excellent choice for anybody for considering hosting their events there. Top levela facilities and excellent staff make for a brilliantad environment within which to operate. The hotel is meticulous in its planning.
+                </div>
+              </div>
+
+            </div>
+            
+            <div class="slider__liner_second">
+
+              <div class="card_item_second">
+                <div class="card_line"></div>
+                <div class="info">
+                  <img src="img/my_photo.jpg" alt="" class="slider_image-card"/>
+                  <div class="main_info">
+                    <p class="main_info_text-first">Tsaplin Vsevolod</p>
+                    <p class="main_info_text-second">Beginner frontend developer</p>
+                  </div>
+                </div>
+
+                <div class="main_text_slider">
+                  Jetrips Hotel is an excellent choice for anybody for considering hosting their events there. Top levela facilities and excellent staff make for a brilliantad environment within which to operate. The hotel is meticulous in its planning.
+                </div>
+              </div>
+      
+              <div class="card_item_second">
+                <div class="info">
+                  <img src="img/eric2.jpg" alt="" class="slider_image-card"/>
+                  <div class="main_info">
+                    <p class="main_info_text-first">Surname Name</p>
+                    <p class="main_info_text-second">Info about another person</p>
+                  </div>
+                </div>
+
+                <div class="main_text_slider">
+                  Jetrips Hotel is an excellent choice for anybody for considering hosting their events there. Top levela facilities and excellent staff make for a brilliantad environment within which to operate. The hotel is meticulous in its planning.
+                </div>
+
+              </div>
+
+              <div class="card_item_second">
+                <div class="info">
+                  <img src="img/eric3.jpg" alt="" class="slider_image-card"/>
+                  <div class="main_info">
+                    <p class="main_info_text-first">Surname Name</p>
+                    <p class="main_info_text-second">Info about another person</p>
+                  </div>
+                </div>
+                <div class="main_text_slider">
+                  Jetrips Hotel is an excellent choice for anybody for considering hosting their events there. Top levela facilities and excellent staff make for a brilliantad environment within which to operate. The hotel is meticulous in its planning.
+                </div>
+              </div>
+
+            </div>
+
+            <div class="slider__wrapper">
+              <div class="slider__dot active-dot"></div>
+              <div class="slider__dot"></div>
+              <div class="slider__dot"></div>
+            </div>
+          </div>
+        </div>
+       
+      </main>
+
+<!-- ================  F O O T E R ===================================-->
+
+      <footer class="">
+        <div class="footer__section">
+
+          <div class="footer__about">
+            <div class="footer__about-logo">
+              <img src="img/logo.png" alt="" id="logo_img">
+            </div>
+            <ul class="footer__links-list">
+              <li class="links-item">
+                <p>You can dream, create, design, and buildsa the most <br> wonderful place.</p>
+              </li>
+              <li class="links-item">
+                <img src="img/Vector (7).png" alt="" id="footer-img1">
+                <p>+0123 456 987, +0123 456 987</p>
+              </li>
+              <li class="links-item">
+                <img src="img/Vector (6).png" alt="" id="footer-img2">
+                <p>yourmailaddress@gmail.com</p>
+              </li>
+              <li class="links-item">
+                <img src="img/Union.png" alt="" id="footer-img3">
+                <p>www.yourwebsitename.com</p>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="footer__links">
+
+            <div class="footer__links-title">
+              Quick Links
+            </div>
+
+            <ul class="footer__links-list">
+              <li class="links-item">
+                <div class="rectancle_footer">
+                </div>
+                <p>About Us</p>
+              </li>
+              <li class="links-item">
+                <div class="rectancle_footer">
+                </div>
+                <p>Destinations</p>
+              </li>
+              <li class="links-item">
+                <div class="rectancle_footer">
+                </div>
+                <p>Latest Blog</p>
+              </li>
+              <li class="links-item">
+                <div class="rectancle_footer">
+                </div>
+                <p>Our Team</p>
+              </li>
+              <li class="links-item">
+                <div class="rectancle_footer">
+                </div>
+                <p>Contact Us</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__support">
+            
+            <div class="footer__links-title">
+              Support
+            </div>
+
+            <ul class="footer__links-list">
+              <li class="links-item">
+                <div class="rectancle_footer">
+                </div>
+                <p>Customer Support</p>
+              </li>
+              <li class="links-item">
+                <div class="rectancle_footer">
+                </div>
+                <p>Privacy & Policy</p>
+              </li>
+              <li class="links-item">
+                <div class="rectancle_footer">
+                </div>
+                <p>Terms & Condition</p>
+              </li>
+              <li class="links-item">
+                <div class="rectancle_footer">
+                </div>
+                <p>Forum</p>
+              </li>
+              <li class="links-item">
+                <div class="rectancle_footer">
+                </div>
+                <p>Tour Guid</p>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="footer__newsletter">
+            <div class="footer__links-title newsletter">
+              Newsletter
+            </div>
+
+            <input type="text" class="rectangular-input" placeholder="Enter your email">
+
+            <button class="newsletter-btn">Subscribe Now</button>
+
+
+          </div>
+        </div>
+      </footer>
+    </div>
+
+
+<!-- ================  S C R I P T S ===================================-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/burgerBtn.js"></script>
+    <script src="js/theam.js"></script>
+    <script src="js/modalBtn.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
